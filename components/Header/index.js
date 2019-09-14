@@ -28,7 +28,7 @@ function Header() {
 
     headerDate.textContent = `${currentDate}`;
     title.textContent = 'Lambda Times';
-    headerTemp.textContent = '98°' // never knew how to make the degree symbol it is "option shift 8"
+    headerTemp.textContent = '98°' // never knew how to make the degree symbol it is "option shift 8" on Mac
 
     // assemble
 
