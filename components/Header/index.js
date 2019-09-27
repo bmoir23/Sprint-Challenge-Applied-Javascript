@@ -9,4 +9,35 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function Header() {
+    // Create template
+
+    const headerDiv = document.createElement('div');
+    const headerDate = document.createElement('span');
+    const title = document.createElement('h1');
+    const headerTemp = document.createElement('span');
+    const currentDate = new Date();
+
+    // classes
+
+    headerDiv.classList.add('header');
+    headerDate.classList.add('date');
+    headerTemp.classList.add('temp');
+
+    // values
+
+    headerDate.textContent = `${currentDate}`;
+    title.textContent = 'Lambda Times';
+    headerTemp.textContent = '98°' // never knew how to make the degree symbol it is "option shift 8" on Mac
+
+    // assemble
+
+    headerDiv.appendChild(headerDate);
+    headerDiv.appendChild(title);
+    headerDiv.appendChild(headerTemp);
+
+return headerDiv;
+}
+
+const headerContainer = document.querySelector('.header-container');
+headerContainer.appendChild(Header());
